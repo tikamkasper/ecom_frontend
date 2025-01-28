@@ -1,0 +1,92 @@
+.home-page {
+  height: 575px;
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer {
+  height: 100px;
+  align-items: center;
+  background-color: bisque;
+  color: blue;
+}
+footer > p {
+  margin-left: 100px;
+}
+
+header {
+  background-color: gray;
+  border: 2px solid red;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  background-color: gray;
+  padding: 10px;
+  width: 900px;
+}
+.user-cart-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-icon {
+  margin-left: 30px;
+}
+.cart-icon > img {
+  border-radius: 50%;
+}
+
+/* signup-form */
+.form-container-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+.form-container-inner {
+  border: 1px solid gray;
+  box-shadow: 10px 10px 5px gray;
+  padding: 20px;
+  border-radius: 10px;
+}
+.form-container-inner > h2 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.form-container-outer > .form-container-inner > form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+label {
+  display: block;
+}
+input{
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.submit_btn>button{
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+
+.notFound{
+  height: 600px;
+  color: blueviolet;
+  background-color: beige;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notFound>div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
