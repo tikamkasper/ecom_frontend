@@ -1,11 +1,16 @@
 import axios from "axios";
 import React from "react";
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useNavigate } from "react-router";
 
 const Header = () => {
+  const navigate = useNavigate();
+
   const handleLogout = () => {
     axios
-      .post("http://localhost:8000/api/v1/users/logout")
+      .get("http://localhost:8000/api/v1/users/logout", {
+        withCredentials: true,
+        credentials: "include",
+      })
       .then((res) => console.log(res.data))
       .catch((error) => console.log(error.message));
   };
@@ -29,14 +34,12 @@ const Header = () => {
             <Link to="/signup">
               <img src="/user_icon.png" alt="user_icon" width="40px" />
             </Link>
-            <Link to="/login">Login</Link>
-            <Link to="#" onClick={() => handleLogout}>
-              Logout
-            </Link>
-            <Link to="/profile">profile</Link>
+
+            <button onClick={() => navigate("/login")}>Login</button>
+            <button onClick={handleLogout}>Logout</button>
           </div>
           <div className="cart-icon">
-            <img src="/cart_icon.jpg" alt="" width="40px" height="40px" />
+            <img src="/cart_icon.png" alt="" width="40px" height="40px" />
           </div>
         </div>
       </nav>
